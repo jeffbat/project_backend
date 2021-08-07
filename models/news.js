@@ -2,9 +2,12 @@ const mongoose = require('mongoose');
 
 const newsCastSchema = new mongoose.Schema( {
 
+  title: String,
   author: String,
+  body: String,
   category: String,
-  publishedDate: Number,
+  publishedDate: String,
+  image: String
 
 });
 

@@ -3,7 +3,7 @@ const router = express.Router()
 const News = require("../models/news.js")
 
 //GET
-router.get("/" (req, res) => {
+router.get("/", (req, res) => {
   News.find({}, (error, foundNews) => {
     res.json(foundNews)
   })
@@ -19,7 +19,7 @@ router.delete("/:id", (req, res) => {
 //POST
 router.post("/", (req, res) => {
   News.create(req.body, (error, createNews) => {
-    res.json(createdNews)
+    res.json(createNews)
   })
 })
 
