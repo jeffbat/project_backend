@@ -8,10 +8,10 @@ const app = express();
 app.use(cors())
 app.use(express.json());
 
-const carsController = require('./controllers/news.js');
+const newsController = require('./controllers/news.js');
 app.use('/news', newsController);
 
-app.listen(3000, ()=> {
+app.listen(3003, ()=> {
   console.log('listening...');
 });
 mongoose.connect(
